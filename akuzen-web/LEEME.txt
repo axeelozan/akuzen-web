@@ -1,0 +1,34 @@
+AKUZEN — PAQUETE PARA PUBLICAR LA PÁGINA
+=========================================
+
+CONTENIDO
+- index.html          La página completa.
+- assets/             Video del hero, logos, foto de portada, íconos e imagen para compartir.
+
+ANTES DE SUBIR (revisá estos 3 puntos en index.html, con cualquier editor de texto)
+1) Correo: buscá  hola@tudominio.com  y reemplazalo por tu correo real.
+2) Imagen al compartir el link: buscá  TU-DOMINIO  (aparece una sola vez, en og:image)
+   y reemplazalo por tu dominio real, por ejemplo  https://akuzen.studio
+   Si todavía no tenés dominio, completalo cuando lo tengas.
+3) WhatsApp e Instagram ya están cargados: 5492612352885 y @akuzen.studio.
+
+PROBARLA EN TU COMPU
+Abrí index.html con doble clic. Si el video no arranca, es normal en algunos navegadores
+al abrir archivos locales: subila a un hosting (ver abajo) y funciona.
+
+SUBIRLA (OPCIÓN MÁS FÁCIL: NETLIFY)
+1) Entrá a netlify.com y creá una cuenta gratuita.
+2) Buscá la opción "Deploy manually" / "Netlify Drop".
+3) Arrastrá la CARPETA completa "akuzen-web" (no solo index.html).
+4) En unos segundos te da un link público. Después podés cambiarle el nombre
+   o conectar tu dominio desde "Domain management".
+
+OTRAS OPCIONES: Cloudflare Pages, Vercel o GitHub Pages (todas tienen plan gratuito).
+
+COLORES (en el bloque :root al inicio del CSS)
+--foam #f8f5f1 | --mist #c1c1be | --slate #7e878b | --sea #3f4c52 | --deep #1b2225
+
+NOTAS
+- El video pesa unos 12 MB. Si querés una carga más liviana en celulares, comprimilo más
+  o reemplazá assets/hero.mp4 por uno más corto (conservá el mismo nombre).
+- Si cambiás un archivo de assets/, mantené el mismo nombre para no tocar el código.
