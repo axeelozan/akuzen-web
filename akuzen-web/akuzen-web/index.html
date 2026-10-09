@@ -596,6 +596,195 @@
       transition: color .5s var(--ease)
     }
 
+    /* Nosotros */
+    #nosotros .about {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 4rem;
+      align-items: start
+    }
+
+    #nosotros h2 {
+      margin-bottom: 0
+    }
+
+    #nosotros .about p {
+      margin: 0 0 1.4rem;
+      color: var(--muted);
+      max-width: 34rem
+    }
+
+    #nosotros .about p:first-child {
+      color: var(--ink);
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.55
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line)
+    }
+
+    .values h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin: 0 0 .4rem
+    }
+
+    .values p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem
+    }
+
+    /* Clientes */
+    #clientes {
+      background: var(--soft)
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform .7s var(--ease), box-shadow .7s var(--ease), border-color .7s var(--ease)
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--mist);
+      box-shadow: 0 18px 40px -22px rgba(27, 34, 37, .35)
+    }
+
+    .shot {
+      position: relative;
+      aspect-ratio: 16/10;
+      background: var(--soft);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden
+    }
+
+    .shot img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top
+    }
+
+    .shot .ph {
+      padding: 1.2rem 1.3rem;
+      display: grid;
+      gap: .6rem;
+      align-content: start
+    }
+
+    .shot .ph i {
+      display: block;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--line)
+    }
+
+    .shot .ph i:first-child {
+      width: 55%;
+      height: 11px;
+      background: var(--mist)
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1.5rem 1.5rem 1.6rem
+    }
+
+    .tag {
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: .5rem
+    }
+
+    .card h3 {
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin: 0 0 .7rem
+    }
+
+    .card p {
+      margin: 0 0 1.4rem;
+      color: var(--muted);
+      font-size: 1rem
+    }
+
+    .card .go {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .95rem;
+      letter-spacing: .03em
+    }
+
+    .card .go svg {
+      width: 16px;
+      height: 16px;
+      transition: transform .6s var(--ease)
+    }
+
+    .card:hover .go svg {
+      transform: translate(3px, -3px)
+    }
+
+    @media (max-width:64rem) {
+      nav {
+        gap: 1.4rem
+      }
+    }
+
+    @media (max-width:60rem) {
+      .cards {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media (max-width:52rem) {
+      #nosotros .about {
+        grid-template-columns: 1fr;
+        gap: 2rem
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+        margin-top: 3rem
+      }
+    }
+
+    @media (max-width:38rem) {
+      .cards {
+        grid-template-columns: 1fr
+      }
+    }
+
     @media (max-width:52rem) {
       .hero::before {
         background: radial-gradient(ellipse 140% 36% at 45% 52%, rgba(248, 245, 241, .62) 0%, rgba(248, 245, 241, .46) 55%, rgba(248, 245, 241, 0) 100%)
@@ -729,6 +918,41 @@
       .bg {
         display: none
       }
+
+      /* Botones: brillo suave */
+      :root {
+        --glide: cubic-bezier(.45, .05, .25, 1)
+      }
+
+      .btn {
+        background-color: var(--accent);
+        background-image: linear-gradient(110deg, transparent 30%, rgba(248, 245, 241, .32) 50%, transparent 70%);
+        background-size: 250% 100%;
+        background-repeat: no-repeat;
+        background-position: 140% 0;
+        box-shadow: 0 0 0 0 rgba(193, 193, 190, 0), 0 0 0 0 rgba(126, 135, 139, 0), 0 10px 24px -14px rgba(63, 76, 82, 0);
+        transition: background-color 1s var(--glide), background-position 1.4s var(--glide),
+          box-shadow 1s var(--glide), transform 1s var(--glide);
+      }
+
+      .btn-wa {
+        box-shadow: 0 0 0 1.5px rgba(37, 211, 102, 0), 0 0 0 0 rgba(126, 135, 139, 0), 0 10px 24px -14px rgba(63, 76, 82, 0);
+      }
+
+      @media (hover: hover) {
+        .btn:hover {
+          background-color: #34424a;
+          background-position: -40% 0;
+          transform: translateY(-2px);
+          box-shadow: 0 0 0 1px rgba(193, 193, 190, .55), 0 0 28px 2px rgba(126, 135, 139, .5),
+            0 14px 30px -14px rgba(63, 76, 82, .65);
+        }
+
+        .btn-wa:hover {
+          box-shadow: 0 0 0 1.5px rgba(37, 211, 102, .6), 0 0 28px 2px rgba(126, 135, 139, .5),
+            0 14px 30px -14px rgba(63, 76, 82, .65);
+        }
+      }
     </style>
   </noscript>
 </head>
@@ -747,6 +971,8 @@
       <nav id="menu" aria-label="Principal">
         <a href="#servicio">Servicio</a>
         <a href="#proceso">Proceso</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#clientes">Clientes</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false"
@@ -800,7 +1026,7 @@
         <div class="steps">
           <div class="step">
             <h3>Charla inicial</h3>
-            <p>Entiendemos tu negocio, tus clientes y qué querés lograr.</p>
+            <p>Entendemos tu negocio, tus clientes y qué querés lograr.</p>
           </div>
           <div class="step">
             <h3>Diseño</h3>
@@ -818,13 +1044,98 @@
       </div>
     </section>
 
+    <section id="nosotros">
+      <div class="wrap">
+        <div class="about">
+          <h2>Un equipo cercano detrás de cada página</h2>
+          <div>
+            <p>Somos AKUZEN, un estudio de diseño y programación web de Mendoza que crea landing pages claras, limpias y
+              a medida.</p>
+            <p>Trabajamos de forma directa con cada cliente: escuchamos qué necesita su negocio, diseñamos una propuesta
+              simple y efectiva, y la llevamos a internet lista para recibir consultas.</p>
+          </div>
+        </div>
+        <div class="values">
+          <div>
+            <h3>Claridad</h3>
+            <p>Cada página dice una sola cosa y lo dice bien.</p>
+          </div>
+          <div>
+            <h3>Fluidez</h3>
+            <p>Diseño y código prolijos, pensados hasta el último detalle.</p>
+          </div>
+          <div>
+            <h3>Cercanía</h3>
+            <p>Trato directo, sin intermediarios y con respuestas rápidas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes">
+      <div class="wrap">
+        <h2>Negocios que ya confían en nosotros</h2>
+        <div class="cards">
+          <!-- ▼ CLIENTE: copiá este bloque para sumar más. Para usar una captura real, reemplazá <div class="ph">…</div> por <img src="assets/clientes/archivo.jpg" alt="Landing de Nombre del cliente"> -->
+          <a class="card" href="https://zingy-bubblegum-cdefe4.netlify.app/" target="_blank" rel="noopener noreferrer">
+
+            <div class="shot" aria-hidden="true">
+              <img src="assets/clientes/portada-cliente1.png" alt="Landing de AloBakan Barbería">
+            </div>
+            <div class="card-body">
+              <span class="tag">Barbería</span>
+              <h3>AloBakan Barbería</h3>
+              <p>Con la creación de su landing page, AloBakan Barbería se dió a conocer de manera efectiva y aumentó su
+                visibilidad en línea.</p>
+              <span class="go">Ver landing page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg></span>
+            </div>
+          </a>
+
+          <!-- ▼ CLIENTE: copiá este bloque para sumar más. Para usar una captura real, reemplazá <div class="ph">…</div> por <img src="assets/clientes/archivo.jpg" alt="Landing de Nombre del cliente"> -->
+          <a class="card" href="https://ejemplo.com" target="_blank" rel="noopener">
+            <div class="shot" aria-hidden="true">
+              <img src="assets/clientes/portada-cliente2.png" alt="Landing de Nombre del cliente">
+            </div>
+            <div class="card-body">
+              <span class="tag">Rubro</span>
+              <h3>Nombre del cliente</h3>
+              <p>Breve descripción del negocio y de lo que logramos con su nueva landing page.</p>
+              <span class="go">Ver landing page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg></span>
+            </div>
+          </a>
+
+          <!-- ▼ CLIENTE: copiá este bloque para sumar más. Para usar una captura real, reemplazá <div class="ph">…</div> por <img src="assets/clientes/archivo.jpg" alt="Landing de Nombre del cliente"> -->
+          <a class="card" href="https://ejemplo.com" target="_blank" rel="noopener">
+            <div class="shot" aria-hidden="true">
+              <div class="ph"><i></i><i></i><i style="width:85%"></i><i style="width:70%"></i></div>
+            </div>
+            <div class="card-body">
+              <span class="tag">Rubro</span>
+              <h3>Nombre del cliente</h3>
+              <p>Breve descripción del negocio y de lo que logramos con su nueva landing page.</p>
+              <span class="go">Ver landing page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="contact">
       <div class="wrap">
         <h2>Contanos qué necesitás</h2>
-        <p>Escribinos sobre tu proyecto y te respondrmos con una propuesta y un plazo.</p>
+        <p>Escribinos sobre tu proyecto y te respondemos con una propuesta y un plazo.</p>
         <a class="btn btn-wa" href="https://wa.me/5492612352885" target="_blank" rel="noopener">Escribir por
           WhatsApp</a>
-        <a class="btn-quiet" href="mailto:hola@tudominio.com">Correo</a>
+        <a class="btn-quiet" href="mailto:akuzen.studio@gmail.com">Correo</a>
         <a class="ig" href="https://instagram.com/akuzen.studio" target="_blank" rel="noopener"
           aria-label="Instagram @akuzen.studio">
           <span class="ig-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"

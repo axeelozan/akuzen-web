@@ -32,3 +32,9 @@ NOTAS
 - El video pesa unos 12 MB. Si querés una carga más liviana en celulares, comprimilo más
   o reemplazá assets/hero.mp4 por uno más corto (conservá el mismo nombre).
 - Si cambiás un archivo de assets/, mantené el mismo nombre para no tocar el código.
+
+AGREGAR CLIENTES (sección "Clientes")
+En index.html buscá los comentarios "CLIENTE:". Cada tarjeta es un bloque: cambiá el rubro,
+el nombre, la descripción y el link (href). Para sumar otra, copiá y pegá un bloque completo.
+Para mostrar una captura de la landing, guardala en assets/clientes/ y reemplazá el bloque
+<div class="ph"> por una etiqueta <img> (el ejemplo está en el comentario).
